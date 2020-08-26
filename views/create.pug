@@ -1,0 +1,19 @@
+
+extends layout
+
+block content
+
+        form(method="post" action="/create")
+            input(type="hidden" name="_csrf" value= csurf)
+            label(for="firstName") firstName:
+            input(type="firstName" id="firstName" value= firstName)
+            label(for="lastName") LastName:
+            input(type="lastName" id="lastName" value= lastName)
+            label(for="email") email:
+            input(type="email" id="email" value= email)
+            label(for="password") password:
+            input(type="password" id="password" value= password)
+            label(for="confirmPassword") confirmPassword:
+            input(type="confirmPassword" id="confirmPassword" value= confirmPassword)
+            input(type="submit" value="Create User")
+
